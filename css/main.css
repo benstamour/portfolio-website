@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css?family=Milonga');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body
+{
+	font-family: Cabin;
+    line-height: 1.75;
+    background-color: black;
+    color: white;
+}
+
+p
+{
+	font-size: 20px;
+}
+
+::selection {
+  background: #87F1FF;
+  color: black;
+}
+
+li
+{
+    line-height: 1;
+}
+
+a:link
+{
+    transition-duration: 0.5s;
+}
+
+.container-fluid
+{
+	padding: 0 !important;
+}
+
+.row
+{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.black-glow-link a
+{
+    font-weight: bold;
+}
+.black-glow-link a:hover
+{
+	color: black;
+	text-shadow: 0 0 0px #87f1ff,
+		0 0 1px #87f1ff,
+		0 0 2px #87f1ff,
+        0 0 3px #87f1ff,
+        0 0 4px #87f1ff,
+        0 0 5px #87f1ff,
+        0 0 6px #87f1ff,
+        0 0 7px #87f1ff,
+        0 0 8px #87f1ff,
+        0 0 9px #87f1ff;
+}
+
+/* LOADER */
+.loader-container
+{
+    height: 100vh;
+}
+.spinner
+{
+    top: 40%;
+	position: fixed;
+    text-align: center;
+
+    -webkit-animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	-ms-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    color: #87F1FF;
+}
+@keyframes spin
+{
+    0%
+    {
+        color: #ff8797;
+    }
+    16.67%
+    {
+        color: #ffa387;
+    }
+    33.33%
+    {
+        color: #fffb87;
+    }
+    50%
+    {
+        color: #adff87;
+    }
+    66.67%
+    {
+        color: #87f1ff;
+    }
+    83.33%
+    {
+        color: #c587ff;
+    }
+    100%
+    {
+        color: #ff8797;
+        transform: rotate(360deg);
+    }
+}
+
+/* NAVBAR */
+
+.navbar
+{
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 20px;
+
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+.navbar-logo
+{
+    height: 64px;
+}
+.navbar-collapse, .dropdown-item
+{
+    text-align: right !important;
+}
+.nav-item .dropdown-item
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.nav-link:hover, .nav-link:active, .nav-link:focus
+{
+    color: black !important;
+	text-shadow: 0 0 0px #87f1ff,
+		0 0 1px #87f1ff,
+		0 0 2px #87f1ff,
+        0 0 3px #87f1ff,
+        0 0 4px #87f1ff,
+        0 0 5px #87f1ff,
+        0 0 6px #87f1ff,
+        0 0 7px #87f1ff,
+        0 0 8px #87f1ff,
+        0 0 9px #87f1ff;
+}
+.nav-item .dropdown-menu
+{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+.nav-item .dropdown-item:hover, .nav-item .dropdown-item:active, .nav-item .dropdown-item:focus
+{
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: black;
+	text-shadow: 0 0 0px #87f1ff,
+		0 0 1px #87f1ff,
+		0 0 2px #87f1ff,
+        0 0 3px #87f1ff,
+        0 0 4px #87f1ff,
+        0 0 5px #87f1ff,
+        0 0 6px #87f1ff,
+        0 0 7px #87f1ff,
+        0 0 8px #87f1ff,
+        0 0 9px #87f1ff;
+}
+nav ul li
+{
+    position: relative;
+}
+
+nav ul ul
+{
+    position: absolute;
+    width: 100%;
+}
+
+/* COVER */
+
+.cover
+{
+	height: 100vh;
+	background-color: #54ebff;
+	background-image: url("../pictures/castlebg-c.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.cover-text
+{
+	top: 50%;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	/*text-shadow: 2px 2px #42c5f5;*/
+}
+
+.cover-text h1
+{
+	font-family: Milonga;
+	font-size: 72px;
+}
+
+.cover-text p
+{
+	font-family: Sedgwick Ave;
+	font-size: 28px;
+}
+
+/* BACK TO TOP BUTTON */
+
+.back-to-top
+{
+    background-color: rgba(135, 241, 255, 0.85);
+    text-align: center;
+    height: 40px;
+    width: 40px;
+}
+.top-icon
+{
+    color: rgba(0, 0, 0, 0.85);
+}
+.back-to-top:hover, .back-to-top:active
+{
+    background-color: black !important;
+    border: 1px solid #87F1FF !important;
+}
+.back-to-top:hover i, .back-to-top:active i
+{
+    color: #87F1FF !important;
+}
+
+/* ABOUT/EDUCATION */
+.about-educ
+{
+    background-color: black;
+    color: white;
+}
+.about-container
+{
+    border: 3px solid #87F1FF;
+    border-radius: 20px;
+    text-align: center;
+}
+.about-heading
+{
+    font-family: "Sedgwick Ave";
+	font-weight: bold;
+    color: #87F1FF;
+    font-size: 48px;
+}
+.about-subheading
+{
+    color: #87F1FF;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Raleway";
+}
+.about-separator
+{
+    border-bottom: 2px solid #87F1FF !important;
+    width: 12%;
+    margin: auto;
+}
+
+/* WORK EXPERIENCE */
+
+.checker
+{
+    color: white;
+}
+.checker-light
+{
+    background-color: #343A40;
+}
+.checker-dark
+{
+    background-color: #24272B;
+}
+.checker h2
+{
+    font-size: 48px;
+    font-family: "Sedgwick Ave";
+    color: #87F1FF;
+    text-align: center;
+}
+.work-subheading
+{
+    font-family: "Raleway";
+    color: #87F1FF;
+    font-weight: bold;
+}
+.work-separator
+{
+    border-bottom: 2px solid #87F1FF !important;
+    width: 12%;
+}
+.checker a
+{
+    color: white;
+}
+
+/* CATEGORY SECTION */
+
+.jobdiv
+{
+	background-color: black;
+    color: white;
+}
+
+.jobtext h1, .jobtext h5, .jobtext p a
+{
+	color: #87F1FF;
+}
+
+.jobtext h1
+{
+    font-family: "Orbitron";
+    font-weight: bold;
+    font-size: 48px;
+}
+.jobtext h5
+{
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+.jobtext p
+{
+	color: white;
+}
+
+.job1
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0,0,0,0.85)), url("../pictures/bipartite.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+.carousel-inner
+{
+    text-align: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/aestabg-c.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+.job3
+{
+    text-align: right;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0,0,0,0.75)), url("../pictures/skyblossom-c.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+.carousel-item
+{
+	text-align: center;
+}
+.fortress-screenshot, .dungeon-screenshot
+{
+	max-width: 60vw;
+	margin-left: auto;
+	margin-right: auto;
+    object-fit: cover;
+}
+.charselect-screen, .rapina-screenshot
+{
+	max-width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jobhr
+{
+    border-color: #87F1FF !important;
+    max-width: 1200px;
+    margin: auto;
+}
+.fulljobhr
+{
+    border-color: #87F1FF !important;
+    margin: auto;
+}
+.separator
+{
+    border-color: #87F1FF !important;
+    width: 10%;
+}
+.separator-left
+{
+    margin-left: 200px;
+}
+.separator-center
+{
+    margin: auto;
+}
+.separator-right
+{
+    margin-left: calc(90% - 3rem);
+}
+.caption a
+{
+    color: #87F1FF;
+}
+
+/* SKILLS */
+
+.skills
+{
+    color: white;
+    background-color: #24272B;
+}
+.skills-heading
+{
+    font-family: "Sedgwick Ave";
+    font-size: 48px;
+    color: #87F1FF;
+    font-weight: bold;
+    text-align: center;
+}
+.skills-subheading
+{
+    color: #87F1FF;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Raleway";
+}
+.skills-container
+{
+    border: 3px solid #87F1FF;
+    border-radius: 20px;
+    text-align: center;
+
+    /* FOR BACKGROUND IMAGES */
+    /*background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;*/
+}
+.skills-container ul
+{
+    text-align: left;
+}
+.skills-separator
+{
+    border-bottom: 2px solid #87F1FF !important;
+    width: 25%;
+    margin: auto;
+}
+
+/* BACKGROUND IMAGES FOR SKILLS */
+/*.skills-1
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/fortressgavaan.jpg");
+    background-position: 60% 10%;
+}
+.skills-2
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/fortressxalerie.jpg");
+    background-position: 70% 10%;
+}
+.skills-3
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/fortressseraz.jpg");
+    background-position: 60% 10%;
+}
+.skills-4
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/fortressaesta.jpg");
+    background-position: 55% 5%;
+}
+.skills-5
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("../pictures/fortressaesta.jpg");
+    background-position: 55% 45%;
+}*/
+
+/* FOOTER */
+
+.footer
+{
+	background-color: black;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(0,0,0,0.25) 40%, rgba(135, 241, 255, 0.25) 100%), url("../pictures/cyberbg-c.jpg");
+	background-repeat: no-repeat;
+	background-position: 70% 20%;
+    background-size: cover;
+}
+
+.footer h2
+{
+	color: white;
+}
+
+.footer p
+{
+	color: white;
+}
+.fa-circle
+{
+    color: black;
+}
+.front-icon
+{
+    color: #87F1FF;
+}
+
+.contactlink:link
+{
+	transition-duration: 0.5s !important;
+}
+
+.contactlink:hover p
+{
+	color: white;
+	text-decoration: underline;
+	text-decoration-color: white;
+}
+
+.contactlink:hover .fa-circle
+{
+	color: #87F1FF;
+    transition: color 0.5s ease;
+}
+.contactlink:hover .front-icon
+{
+	color: black;
+    transition: color 0.5s ease;
+}
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 991px)
+{
+    .navbar-collapse
+    {
+        background-color: rgba(0,0,0,0.85);
+        border: 3px solid #87F1FF;
+        border-radius: 20px;
+    }
+    .first-item
+    {
+        margin-top: 15px;
+    }
+    .last-item
+    {
+        margin-bottom: 15px;
+    }
+    .cover, .job1
+    {
+        background-attachment: scroll;
+        background-position: 20% 50%;
+    }
+    .carousel-inner, .job3
+    {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .jobtext h1, .about-heading, .skills-heading, .checker h2
+    {
+        font-size: 36px;
+    }
+    .checker h3, .about-container h3
+    {
+        font-size: 24px;
+    }
+    .checker h5, .about-container h5
+    {
+        font-size: 18px;
+    }
+    p
+    {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 460px)
+{
+	.cover-text h1
+	{
+		font-size: 48px;
+	}
+
+	.cover-text p
+	{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 400px)
+{
+	.job1 h1
+    {
+        margin: auto !important;
+        text-align: center;
+    }
+}
+
+@media (max-height: 480px)
+{
+	.cover-text h1
+	{
+		font-size: 48px;
+	}
+	.cover-text p
+	{
+		font-size: 20px;
+	}
+}

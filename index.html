@@ -1,0 +1,451 @@
+<!-- Portfolio -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Benjamin St. Amour | Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+		<!-- Bootstrap CSS CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+		<!-- Bootstrap MaxCDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!-- For icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="pictures/bsalogo.jpg" />
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script>
+            document.onreadystatechange = function()
+            {
+                if(document.readyState !== "complete")
+                {
+                    document.querySelector("body").style.visibility = "hidden";
+                    document.querySelector("#loader-container").style.visibility = "visible";
+                }
+                else
+                {
+                    document.querySelector("#loader-container").style.display = "none";
+                    document.querySelector("body").style.visibility = "visible";
+                }
+            };
+        </script>
+        <script>
+            function scrolltotop()
+            {
+                var top = document.documentElement.scrollTop;
+                
+                if(top != 0)
+                {
+                    window.scroll({top: 0, behavior: "smooth"})
+                }
+            }
+        </script>
+        <script>
+            function showButton()
+            {
+                var topbutton = document.getElementById("backtotop");
+                var numPixels = document.documentElement.scrollTop;
+                if (numPixels >= 500)
+                {
+                    topbutton.style.visibility = "visible";
+                    topbutton.style.display = "block";
+                }
+                else
+                {
+                    topbutton.style.visibility = "hidden";
+                }
+            };
+            window.addEventListener("scroll", showButton);
+        </script>
+	</head>
+
+	<body>
+        <!-- LOADER -->
+        <div class="row container-fluid loader-container" id="loader-container">
+            <p class="spinner my-auto" id="spinner"><i class="fa-solid fa-atom fa-5x"></i></p>
+        </div>
+
+        <!-- BACK TO TOP BUTTON -->
+        <button class="btn sticky-bottom position-fixed back-to-top p-0 bottom-0 end-0 mx-3 my-3" id="backtotop" onclick="scrolltotop();" style="display: none">
+            <i class="top-icon fa-solid fa-caret-up fa-2xl"></i>
+        </button>        
+
+		<!-- COVER -->
+		<header class="cover-container cover page-header header container-fluid" id="cover">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#"><img class="navbar-logo" src="pictures/bsatrans8pt.png" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mr-5">
+                        <li class="nav-item first-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Programming Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://github.com/benstamour/maximum-matching">Maximum Matching Project</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Unity Games
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/dungeon">The Dungeon</a></li>
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/fortress">The Fortress</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Web Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/starsprinter">Sci-Fi Store</a></li>
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/mastermind">Mastermind</a></li>
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/trivia">Trivia</a></li>
+                                <li><a class="dropdown-item" href="https://bensta.epizy.com/feud">Feud</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="contactlink" href="https://www.linkedin.com/in/benjamin-st-amour-139a66243/">
+                                <span class="fa-stack my-1">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x front-icon"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="contactlink" href="mailto:b.st.amour6@gmail.com">
+                                <span class="fa-stack my-1">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-envelope fa-stack-1x front-icon"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item last-item">
+                            <a class="contactlink" href="https://github.com/benstamour/portfolio">
+                                <span class="fa-stack my-1">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x front-icon"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- COVER IMAGE/TEXT -->
+			<div class="cover-text">
+				<p style="margin:0;padding:0">Hi, I'm</p>
+				<h1>Benjamin <br class="d-lg-none"/>St. Amour</h1>
+				<p class="titles1 d-none d-lg-block">Programmer – Game Developer – Web Developer</p>
+				<p class="titles2 d-none d-sm-block d-lg-none">Programmer – Game Developer<br />Web Developer</p>
+				<p class="titles3 d-block d-sm-none">Programmer<br />Game Developer<br />Web Developer</p>
+			</div>
+		</header>
+
+        <!-- ABOUT ME / EDUCATION -->
+
+        <div class="container-fluid about-educ">
+			<div class="row container-fluid">
+				<div class="col-lg-5 col-md-5 col-sm-12 d-flex">
+                    <div class="about-container container-fluid mx-1 my-3 flex-fill">
+					    <h2 class="about-heading mx-3 my-3">About Me</h2>
+                        <div class="about-separator"></div>
+                        <p class="mx-3 my-3">My first exposure to programming was in university, after I decided to do a joint degree in math and computer science. Ever since then, I've developed a passion for coding, and I love designing websites and games where I can be creative and express myself.<br/><br/>I am a fast learner, detail-oriented, and driven to succeed, and I take pride in getting things done right and with high quality.</p>
+                    </div>
+				</div>
+                <div class="col-lg-7 col-md-7 col-sm-12 d-flex">
+                    <div class="about-container container-fluid mx-1 my-3 flex-fill">
+					    <h2 class="about-heading mx-3 my-3">Education</h2>
+                        <div class="about-separator"></div>
+                        <h3 class="about-subheading mx-3 my-3">Bachelor's Degree, Mathematics and Computer Science</h3>
+                        <h5 class="about-subheading mx-3 my-3"><i>University of Windsor – September 2018 – April 2022</i></h5>
+                        <div class="about-separator"></div>
+                        <p class="mx-3 my-3">Throughout my joint degree, I learned and developed skills in a variety of languages and tools. I took two courses on game design using Unity, where I worked with a team to complete some of the projects; one of the courses also focused on artificial intelligence in games. I also took a course on machine learning, where I worked with the scikit-learn and matplotlib libraries. Some other courses I took involved full stack development, computer graphics, and database management systems.</p>
+                    </div>
+				</div>
+			</div>
+        </div>
+
+        <!-- WORK EXPERIENCE -->
+
+        <div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12 checker checker-dark">
+					<h2 class="work-title mx-3 my-3">Work Experience</h2>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 checker checker-light">
+                    <h3 class="work-subheading mx-3 my-3">Full-Stack Website Developer</h3>
+                    <h5 class="work-subheading mx-3 my-3"><i>University of Windsor – December 2021 – October 2022</i></h5>
+                    <div class="work-separator mx-3"></div>
+					<p class="mx-3 my-3">I built a website for a professor to be used in an exoplanets course offered by the Department of Physics; coded using Django, it will allow students to interact with graphs created by the site and analyze the resulting data.</p>
+				</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 checker checker-light">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 checker checker-dark">
+                    <h3 class="work-subheading mx-3 my-3">Vehicular Network Research Assistant</h3>
+                    <h5 class="work-subheading mx-3 my-3"><i>University of Windsor – May 2019 – Present</i></h5>
+                    <div class="work-separator mx-3"></div>
+					<p class="mx-3 my-3">I worked on multiple research projects within the Department of Computer Science, where I worked with simulation software and libraries, analyzed data using programs that I wrote, and was second author on three research papers. In this role, I participated in the University of Windsor's Work Study program three times and received two NSERC Undergraduate Research awards.<br /><br />
+					The research papers I contributed to are:
+					<ul class="black-glow-link">
+						<li><p><a href="https://www.mdpi.com/2078-2489/11/9/443">Intelligent Adversary Placements for Privacy Evaluation in VANET</a></p></li>
+						<li><p><a href="https://www.mdpi.com/2079-9292/10/16/1902">Balancing Awareness and Congestion in Vehicular Networks Using Variable Transmission Power</a></p></li>
+						<li><p><a href="https://www.mdpi.com/2076-3417/13/6/3640">A Reinforcement Learning–Based Congestion Control Approach for V2V Communication in VANET</a></p></li>
+
+					</ul>
+                    </p>
+				</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 checker checker-dark">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 checker checker-light">
+                    <h3 class="work-subheading mx-3 my-3">Full-Stack Website Developer</h3>
+                    <h5 class="work-subheading mx-3 my-3"><i>University of Windsor – December 2021 – October 2022</i></h5>
+                    <div class="work-separator mx-3"></div>
+					<p class="mx-3 my-3">I worked as a Python programming teaching assistant, where one of my main jobs was answering any questions that students had and making sure they understood the concepts, as well as helping them go through their code to debug it.<br /><br />
+					In January 2021, the professor of the course designated me as the head teaching assistant, giving me additional responsibilities, such as reviewing the marking of other teaching assistants and recording a video of myself writing and explaining a sample lab program.</p>
+				</div>
+			</div>
+		</div>
+
+        <!-- CATEGORY/EXPERIENCE SECTION -->
+
+        <div class="jobdiv">
+            <div class="jobdescr job1 container-fluid">
+                <hr class="fulljobhr border border-2 opacity-100">
+                <div class="jobtext">
+                    <h5 class="mx-5 mt-3">My experience as a</h5>
+                    <h1 class="mx-5 mt-0">PROGRAMMER</h1>
+                    <hr class="separator separator-left border border-2 opacity-100 mx-5 my-3">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-12 exp-desc px-5 py-3">
+                            <p class="black-glow-link">I've had extensive programming experience throughout my university career; one of the largest development projects I've done has been in my role as a research assistant, where I coded road networks and traffic simulation files, introducing new algorithms and figuring out how to control various attributes and output the desired simulation data. I also helped to code a machine learning algorithm using Q-learning for a research paper. Furthermore, I built my own programs to automate the analyzing of large output files of simulation data. I also proved myself to be able to learn new coding languages and tools quickly - I learned Python and C++ in this role and used both of them extensively, as well as new software and libraries.<br /><br />
+                            In my machine learning class, I worked with the scikit-learn and matplotlib libraries in Python to use several of the machine learning methods we covered in class, and in my class on big data, I coded several different algorithms to find frequent pairs of items given a large dataset. I used programming in my math classes, too - for example, I created a program for the final project in my graph theory class to <a href="https://github.com/benstamour/maximum-matching">determine a maximum matching from any given bipartite graph</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="jobhr border border-2 opacity-100">
+            <div id="carouselIndicators" class="carousel slide" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="jobdescr job2 container-fluid">
+                            <hr class="opacity-0" style="margin:auto">
+                            <div class="jobtext">
+                                <h5 class="mx-5 mt-3">My experience as a</h5>
+                                <h1 class="mx-5 mt-0">GAME DEVELOPER</h1>
+                                <hr class="separator separator-center border border-2 opacity-100 my-3">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-0">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-12 exp-desc px-5 py-3">
+                                        <p class="black-glow-link" style="text-align: center">I took two game development courses in university; the first involved working with a team for the projects as our own mini game studio, using Unity and C#, culminating in our final project, <i>Rapina:</i> a multiplayer capture the flag game. I played a major role in scripting, level design, and core game mechanics; from the medieval fantasy, fire-versus-ice theme of the first arena and the post-apocalyptic sci-fi setting of the second, to buttons and levers required to unlock doors and the flag, and even a deadly laser maze, I helped make it happen.<br /><br />
+                                        My second game design course focused specifically on artificial intelligence for games, where I worked with large codebases to implement the concepts learned in class and added extra features to improve the quality and depth of the games.<br /><br />I've also created my own Unity games since then, two 3D dungeon platformers, where in addition to scripting and level design, I also worked with GUI, animations, textures, audio, lighting, and editing 3D models. You can check out the games at these links: <a href="https://bensta.epizy.com/dungeon/"><i>The Dungeon</i></a> and <a href="https://bensta.epizy.com/fortress/"><i>The Fortress</i></a>!</p><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="fortress-screenshot" src="pictures/screenshot_fortress.jpg" alt="Gameplay screenshot from The Fortress">
+                        <p class="caption black-glow-link mx-3 my-3">Gameplay screenshot from <a href="https://bensta.epizy.com/fortress"><i>The Fortress</i></a></p><br />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="dungeon-screenshot" src="pictures/screenshot_dungeon.jpg" alt="Gameplay screenshot from The Dungeon">
+                        <p class="caption black-glow-link mx-3 my-3">Gameplay screenshot from <a href="https://bensta.epizy.com/dungeon"><i>The Dungeon</i></a></p><br />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="charselect-screen" src="pictures/screenshot_charselect.jpg" alt="Background of character selection screen from the Fortress, made by me in Blender">
+                        <p class="caption black-glow-link mx-3 my-3">Background of character selection screen from <a href="https://bensta.epizy.com/fortress"><i>The Fortress</i></a>, made by me in Blender</p><br />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="rapina-screenshot" src="pictures/screenshot_rapina.jpg" alt="Gameplay screenshot from Rapina">
+                        <p class="caption mx-3 my-3">Gameplay screenshot from <i>Rapina</i></p><br />
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="jobdescr job3 container-fluid">
+                <hr class="jobhr border border-2 opacity-100">
+                <div class="jobtext">
+                    <h5 class="mx-5 mt-3">My experience as a</h5>
+                    <h1 class="mx-5 mt-0">WEB DEVELOPER</h1>
+                    <div class="container-fluid">
+                        <hr class="separator separator-right border border-2 opacity-100 my-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-0">
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 exp-desc px-5 py-3">
+                            <p class="black-glow-link" style="text-align: right">I took two web development courses in university, where we worked with HTML, CSS, JavaScript, PHP, and SQL. For one of my projects, I built a <a href="https://bensta.epizy.com/library">library website</a>, complete with a search catalogue, login system, responsive features, and the administrative ability to add, edit, and delete from the database through the website.<br /><br />
+                            Now, I'm expanding my abilities by using the Django web framework to build another website for the University of Windsor's exoplanets course, which will generate graphs that students can interact with and analyze data based on their inputs.<br /><br />
+                            I have also used React to build <a href="https://bensta.epizy.com/mastermind">Mastermind</a>, <a href="https://bensta.epizy.com/trivia">trivia</a>, and <a href="https://bensta.epizy.com/feud">Feud</a> games. This webpage is another project of mine, coded entirely by me! In addition, I have used Wordpress to create another version of this webpage <a href="https://bensta.42web.io">here</a>.<br /><br />
+                            For my latest web development project, I've improved upon my library site by creating a new <a href="https://bensta.epizy.com/starsprinter">sample sci-fi store website</a>, combining my knowledge of JavaScript, PHP, and SQL with Bootstrap and improved web design and development techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="fulljobhr border border-2 opacity-100">
+        </div>
+
+        <!-- SKILLS -->
+
+        <div class="skills container-fluid">
+            <hr class="opacity-0" style="margin:auto">
+			<h2 class="skills-heading mx-3 mt-4 mb-2">My Skills</h2>
+            <div class="row no-gutters">
+				<div class="row col-lg-3 col-md-6 col-sm-12">
+                    <div class="skills-container container-fluid mx-1 mt-3 flex-fill skills-1">
+					    <h2 class="skills-subheading mx-3 my-3">Concepts and Fields</h2>
+                        <div class="skills-separator"></div>
+                        <ul class="mx-3 my-3">
+                            <li><p>Full Stack Development</p></li>
+                            <li><p>Game Development and Design</p></li>
+                            <li><p>Object-Oriented Programming</p></li>
+                            <li><p>Relational Databases</p></li>
+                            <li><p>Scripting</p></li>
+                            <li><p>Artificial Intelligence</p></li>
+                            <li><p>Machine Learning</p></li>
+                            <li><p>3D/Vector Math</p></li>
+                        </ul>
+                    </div>
+				</div>
+                <div class="row col-lg-3 col-md-6 col-sm-12">
+                    <div class="skills-container container-fluid mx-1 mt-3 flex-fill skills-2">
+					    <h2 class="skills-subheading mx-3 my-3">Tools</h2>
+                        <div class="skills-separator"></div>
+                        <ul class="mx-3 my-3">
+                            <li><p>Django</p></li>
+                            <li><p>Unity</p></li>
+                            <li><p>MySQL</p></li>
+                            <li><p>Microsoft Word, Excel, and PowerPoint</p></li>
+                            <li><p>Bootstrap</p></li>
+                            <li><p>GitHub</p></li>
+                            <li><p>React</p></li>
+                            <li><p>matplotlib, scikit-learn, and discord.py Python Libraries</p></li>
+                            <li><p>AJAX</p></li>
+                            <li><p>WordPress</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row col-lg-3 col-md-6 col-sm-12">
+                    <div class="skills-container container-fluid mx-1 mt-3 flex-fill skills-3">
+					    <h2 class="skills-subheading mx-3 my-3">Coding Languages</h2>
+                        <div class="skills-separator"></div>
+                        <ul class="mx-3 my-3">
+                            <li><p>Python</p></li>
+                            <li><p>C++</p></li>
+                            <li><p>C#</p></li>
+                            <li><p>HTML</p></li>
+                            <li><p>CSS</p></li>
+                            <li><p>PHP</p></li>
+                            <li><p>JavaScript</p></li>
+                            <li><p>SQL</p></li>
+                            <li><p>XML</p></li>
+                        </ul>
+                    </div>
+				</div>
+                <div class="row col-lg-3 col-md-6 col-sm-12">
+                    <div class="skills-container container-fluid mx-1 mt-3 flex-fill skills-4">
+					    <h2 class="skills-subheading mx-3 my-3">Soft Skills</h2>
+                        <div class="skills-separator"></div>
+                        <ul class="mx-3 my-3">
+                            <li><p>Working in a Team</p></li>
+                            <li><p>Proofreading and Editing</p></li>
+                            <li><p>Writing</p></li>
+                            <li><p>Problem Solving</p></li>
+                            <li><p>Detail-Oriented</p></li>
+                            <li><p>Critical Thinking</p></li>
+                            <li><p>Quick Learner</p></li>
+                        </ul>
+                    </div>
+                    <div class="skills-container container-fluid mx-1 mt-3 flex-fill skills-5">
+					    <h2 class="skills-subheading mx-3 my-3">World Languages</h2>
+                        <div class="skills-separator"></div>
+                        <ul class="mx-3 my-3">
+                            <li><p>English (Native)</p></li>
+                            <li><p>French (Conversational)</p></li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+		<div class="footer container-fluid mt-3">
+			<div class="footertext">
+				<br />
+                <div class="d-none d-md-block contact-full mx-5">
+                    <a class="contactlink" href="https://www.linkedin.com/in/benjamin-st-amour-139a66243/">
+                    <span class="fa-stack fa-2x my-1">
+                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x front-icon"></i>
+                    </span></a>
+                    <br />
+                    <a class="contactlink" href="mailto:b.st.amour6@gmail.com">
+                    <span class="fa-stack fa-2x my-1">
+                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                        <i class="fa-solid fa-envelope fa-stack-1x front-icon"></i>
+                    </span></a>
+                    <br />
+                    <a class="contactlink" href="https://github.com/benstamour/portfolio">
+                    <span class="fa-stack fa-2x my-1">
+                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x front-icon"></i>
+                    </span></a>
+                </div>
+                <div class="d-md-none contact-condensed my-3">
+                    <div class="icons" style="text-align: center">
+                        <a class="contactlink" href="https://www.linkedin.com/in/benjamin-st-amour-139a66243/">
+                        <span class="fa-stack fa-2x mx-1">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x front-icon"></i>
+                        </span></a>
+                        <a class="contactlink" href="mailto:b.st.amour6@gmail.com">
+                        <span class="fa-stack fa-2x mx-1">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-solid fa-envelope fa-stack-1x front-icon"></i>
+                        </span></a>
+                        <a class="contactlink" href="https://github.com/benstamour/portfolio">
+                        <span class="fa-stack fa-2x mx-1">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-github fa-stack-1x front-icon"></i>
+                        </span></a>
+                    </div>
+                </div><br />
+			</div>
+		</div>
+
+        <!-- Bootstrap JavaScript CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+		<!-- For carousel -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>
